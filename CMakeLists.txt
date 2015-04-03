@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( Panorama)
+find_package( OpenCV )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( panorama akaze-match-template.cpp )
+target_link_libraries( panorama ${OpenCV_LIBS} )
